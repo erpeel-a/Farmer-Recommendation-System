@@ -1,0 +1,51 @@
+user
+ -id int primary_key auto increment
+ -name varchar(255)
+ -email varchar(255)
+ -password varchar(255) 
+ -created_at timestap
+ -updated_at timestap
+ 
+ wilayah
+  -id int primary_key auto increment
+  -nama_wilayah varchar(255)
+  -created_at timestap
+  -updated_at timestap
+  
+ satuan
+ -id int primary_key auto increment
+ -nama_satuan
+ -created_at timestap
+ -updated_at timestap
+ 
+ kebutuhan per wilayah
+ -id int primary_key auto increment
+ -wilayah_id
+ -satuan_id
+ -nama_kebutuhan varchar(255)
+ -harga kebutuhan varchar(255)
+ -keterangan text
+ -created_at timestap
+ -updated_at timestap
+ 
+ rekomendasi
+  -id int primary_key auto increment
+  -jumlah
+  -harga total
+  -created_at timestap
+  -updated_at timestap
+  
+  
+ rekomendasi musim tanam 
+ -id int primary_key auto increment
+ -wilayah_id UnsignedBigInteger FK
+ -rekomendasi_id UnsignedBigInteger FK
+ -nama_petani varchar(255)
+ -nama_musim varchar(255)
+ -luas_tanah varhar(255)
+ -tanggal_tanam date
+ -created_at timestap
+ -updated_at timestap
+ 
+ NB: nek pengen ditambahi softdelete monggo
+ 
