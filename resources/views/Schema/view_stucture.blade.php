@@ -67,7 +67,7 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="">Laravel</a>
+                        <a href="">Boilerplate Admin Template</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="#">CP</a>
@@ -75,37 +75,34 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
                         <li class="#">
-                        <a class="nav-link" href="{{url('site/admin')}}">
+                        <a class="nav-link" href="">
                                 <i class="fas fa-fire"></i><span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="menu-header">Content</li>
+                        <li class="menu-header">Master Data</li>
                         <li class="#">
-                            <a class="nav-link" href="{{route('posts.index')}}">
-                                <i class="fas fa-newspaper"></i> <span>Post</span>
-                            </a>
-                        </li>
-                        <li class="menu-header">Media</li>
-                        <li class="#">
-                            <a class="nav-link" href="{{url('site/admin/social_media')}}">
-                                <i class="far fa-paper-plane"></i> <span>Social Media</span>
+                            <a class="nav-link" href="">
+                                <i class="fas fa-newspaper"></i> <span>Satuan</span>
                             </a>
                         </li>
                         <li class="#">
-                            <a class="nav-link" href="{{url('site/admin/message')}}">
-                                <i class="far fa-paper-plane"></i> <span>Message</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-header">Configure</li>
-                        <li class="#">
-                            <a class="nav-link" href="{{url('site/admin/users')}}">
-                                <i class="fas fa-users"></i> <span>Users</span>
+                            <a class="nav-link" href="">
+                                <i class="far fa-paper-plane"></i> <span>Wilayah</span>
                             </a>
                         </li>
                         <li class="#">
-                            <a class="nav-link" href="{{url('site/admin/setting')}}">
-                                <i class="fas fa-cog"></i> <span>Setting</span>
+                            <a class="nav-link" href="">
+                                <i class="far fa-paper-plane"></i> <span>Kebutuhan</span>
+                            </a>
+                        </li>
+                        <li class="#">
+                            <a class="nav-link" href="">
+                                <i class="far fa-paper-plane"></i> <span>Musim Tanam</span>
+                            </a>
+                        </li>
+                        <li class="#">
+                            <a class="nav-link" href="">
+                                <i class="far fa-paper-plane"></i> <span>Rekomendasi</span>
                             </a>
                         </li>
                     </ul>
@@ -116,7 +113,7 @@
             <footer class="main-footer">
                 <div class="footer-left">
                     Copyright &copy; 2020
-                    <div class="bullet"></div> <a href="#">Muhamad Zainal Arifin</a>
+                    <div class="bullet"></div> <a href="#">XII RPL A SMKN 2 KAARANGANYAR</a>
                 </div>
             </footer>
         </div>
@@ -130,78 +127,13 @@
     <script src="{{asset('Backend/js/stisla.js')}}"></script>
     <script src="{{asset('Backend/js/scripts.js')}}"></script>
     <script src="{{asset('Backend/js/ckeditor.js')}}"></script>
-    {{-- <script>
+    <script>
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-    </script> --}}
-    <script>
-        $('.js-upload-image').change(function(event) {
-            makePreview(this);
-            $('#upload-img-preview').show();
-            $('#upload-img-delete').show();
-        });
-
-        function makePreview(input){
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#upload-img-preview').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        $('#upload-img-delete').click(function(event) {
-            event.preventDefault();
-
-            $('#upload-img-preview').attr('src', '').hide();
-            $('.custom-file-input').val(null);
-            $(this).hide();
-        });
-
-      
-        if ($('#description').length != 0) {
-            CKEDITOR.replace('description', config);
-        }
     </script>
-   
 </body>
 
 </html>
-
-
-{{-- // var config = {
-  //     extraPlugins: 'uploadimage,image2',
-  //     height: '30em',
-
-  //     filebrowserBrowseUrl: '{{ url('elfinder/ckeditor') }}',
-  //     filebrowserUploadUrl: '{{ route('cp.upload',['_token' => csrf_token()]) }}',
-
-  //     stylesSet: [{
-  //         name: 'Narrow image',
-  //         type: 'widget',
-  //         widget: 'image',
-  //         attributes: {
-  //             'class': 'image-narrow'
-  //         }
-  //     },{
-  //         name: 'Wide image',
-  //         type: 'widget',
-  //         widget: 'image',
-  //         attributes: {
-  //             'class': 'image-wide'
-  //         }
-  //     }],
-
-  //     contentsCss: [
-  //         'https://cdn.ckeditor.com/4.11.3/full-all/contents.css',
-  //     ],
-
-  //     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
-  //     image2_disableResizer: true,
-  //     removeDialogTabs: 'link:upload;image:upload',
-  //     allowedContent: true
-  // } --}}

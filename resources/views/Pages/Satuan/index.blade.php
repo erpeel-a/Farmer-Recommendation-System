@@ -4,7 +4,7 @@
      <div class="main-content">
       <section class="section">
           <div class="section-header">
-              <h1>Posts</h1>
+              <h1>Master Data Satuan</h1>
           </div>
           <div class="row">
             <div class="col">
@@ -15,9 +15,7 @@
                       <thead class="thead-light">
                         <tr>
                           <th class="thead">No</th>
-                          <th class="thead">Name</th>
-                          <th class="thead">Subject</th>
-                          <th class="thead">Message</th>
+                          <th class="thead">Nama Satuan</th>
                           <th class="thead">Aksi</th>
                         </tr>
                       </thead>
@@ -25,9 +23,7 @@
                           <tr>
                             <td>1</td>
                             <td>ini judul</td>
-                            <td>Kategori</td>
-                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing.</td>
-                            <td><a href="" class="btn btn-info ml-2 mr-2 mt-1">Balas</a><a href="" class="btn btn-danger ml-2 mr-2 mt-1">Delete</a></td>
+                            <td><a href="" class="btn btn-info ml-2 mr-2 mt-1">Update</a><a href="" class="btn btn-danger ml-2 mr-2 mt-1">Delete</a></td>
                           </tr>
                         </tbody>
                     </table>
