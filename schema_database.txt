@@ -20,8 +20,8 @@ user
  
  kebutuhan per wilayah
  -id int primary_key auto increment
- -wilayah_id
- -satuan_id
+ -wilayah_id UnsignedBigInteger FK
+ -satuan_id UnsignedBigInteger FK
  -nama_kebutuhan varchar(255)
  -harga kebutuhan varchar(255)
  -keterangan text
@@ -30,7 +30,8 @@ user
  
  rekomendasi
   -id int primary_key auto increment
-  -jumlah
+  -kebutuhan_id UnsignedBigInteger FK
+  -jumlah 
   -harga total
   -created_at timestap
   -updated_at timestap
