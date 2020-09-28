@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AuthController;
-
+use App\Http\Controllers\Admin\KebutuhanController;
+use App\Http\Controllers\Admin\Musim_tanamController;
+use App\Http\Controllers\Admin\RekomendasiController;
+use App\Http\Controllers\Admin\SatuanController;
+use App\Http\Controllers\Admin\WilayahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +20,15 @@ use App\Http\Controllers\Admin\AuthController;
 |
 */
 
-Route::get('/', function(){
+Route::get('/', function () {
   return view('welcome');
 });
 
 // contoh
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/admin', [DashboardController::class, 'index']);
+Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
+Route::get('/musim', [Musim_tanamController::class, 'index']);
+Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
+Route::get('/satuan', [SatuanController::class, 'index']);
+Route::get('/wilayah', [WilayahController::class, 'index']);

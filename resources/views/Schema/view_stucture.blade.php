@@ -66,43 +66,40 @@
             </nav>
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
-                    <div class="sidebar-brand">
-                        <a href="">Boilerplate Admin Template</a>
-                    </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="#">CP</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
-                        <li class="#">
-                        <a class="nav-link" href="">
+                        <li class="/admin">
+                        <a class="nav-link" href="/admin">
                                 <i class="fas fa-fire"></i><span>Dashboard</span>
                             </a>
                         </li>
                         <li class="menu-header">Master Data</li>
-                        <li class="#">
-                            <a class="nav-link" href="">
-                                <i class="fas fa-newspaper"></i> <span>Satuan</span>
+                        <li class="/satuan">
+                            <a class="nav-link" href="/satuan">
+                                <i class="fas fa-cubes"></i> <span>Satuan</span>
                             </a>
                         </li>
                         <li class="#">
-                            <a class="nav-link" href="">
-                                <i class="far fa-paper-plane"></i> <span>Wilayah</span>
+                            <a class="nav-link" href="/wilayah">
+                                <i class="fas fa-globe-asia"></i> <span>Wilayah</span>
                             </a>
                         </li>
                         <li class="#">
-                            <a class="nav-link" href="">
-                                <i class="far fa-paper-plane"></i> <span>Kebutuhan</span>
+                            <a class="nav-link" href="/kebutuhan">
+                                <i class="fas fa-list-ol"></i> <span>Kebutuhan</span>
                             </a>
                         </li>
                         <li class="#">
-                            <a class="nav-link" href="">
-                                <i class="far fa-paper-plane"></i> <span>Musim Tanam</span>
+                            <a class="nav-link" href="/musim">
+                                <i class="fas fa-cloud"></i> <span>Musim Tanam</span>
                             </a>
                         </li>
                         <li class="#">
-                            <a class="nav-link" href="">
-                                <i class="far fa-paper-plane"></i> <span>Rekomendasi</span>
+                            <a class="nav-link" href="/rekomendasi">
+                                <i class="fas fa-comments"></i> <span>Rekomendasi</span>
                             </a>
                         </li>
                     </ul>
