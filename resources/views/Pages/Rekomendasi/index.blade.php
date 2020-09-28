@@ -26,6 +26,7 @@
                             <td>1</td>
                             <td>ini judul</td>
                             <td>ini judul</td>
+                            <td>ini judul</td>
                             <td><a href="" class="btn btn-info ml-2 mr-2 mt-1">Update</a><a href="" class="btn btn-danger ml-2 mr-2 mt-1">Delete</a></td>
                           </tr>
                         </tbody>
