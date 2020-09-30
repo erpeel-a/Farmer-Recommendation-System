@@ -33,7 +33,20 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
   Route::get('/musim', [Musim_tanamController::class, 'index']);
   Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
+  // satuan
   Route::get('/satuan', [SatuanController::class, 'index']);
+  Route::get('/satuan/create', [SatuanController::class, 'create'])->name('satuan.create');
+  Route::post('/satuan', [SatuanController::class, 'store'])->name('satuan.store');
+  Route::get('/satuan/edit/{id}', [SatuanController::class, 'edit'])->name('satuan.edit');
+  Route::put('/satuan/update/{id}', [SatuanController::class, 'update'])->name('satuan.update');
+  Route::delete('/satuan/delete/{id}', [SatuanController::class, 'destroy'])->name('satuan.destroy');
+
   Route::get('/wilayah', [WilayahController::class, 'index']);
+  Route::get('/wilayah/create', [WilayahController::class, 'create'])->name('wilayah.create');
+  Route::post('/wilayah', [WilayahController::class, 'store'])->name('wilayah.store');
+  Route::get('/wilayah/edit/{id}', [WilayahController::class, 'edit'])->name('wilayah.edit');
+  Route::put('/wilayah/update/{id}', [WilayahController::class, 'update'])->name('wilayah.update');
+  Route::delete('/wilayah/delete/{id}', [WilayahController::class, 'destroy'])->name('wilayah.destroy');
+
   Route::post('/logout', [AuthController::class, 'logout'])->name('process.logout');
 });
