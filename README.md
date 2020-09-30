@@ -27,9 +27,11 @@ $ cd Farmer-Recommendation-System
 $ composer install
 $ cp .env.example to .env
 $ change setting for database & generate key with php artisan key:generate
+$ Call Action to Migrate Database & seeder with php artisan migrate --seed
+$ php artisan serve
 ```
 
-License
+The Project is MIT licensed.
 ----
 
 © Muhamad Zainal Arifin | © Hendra Agil S | © Niko Febriyanto 
