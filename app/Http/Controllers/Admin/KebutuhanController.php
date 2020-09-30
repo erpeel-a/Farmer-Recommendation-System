@@ -9,6 +9,9 @@ class KebutuhanController extends Controller
 {
   public function index()
   {
-    return view('Pages.Kebutuhan.index');
+    $this->var = [
+      'title' => 'Dashboard | Kebutuhan'
+    ];
+    return view('Pages.Kebutuhan.index', $this->var);
   }
 }

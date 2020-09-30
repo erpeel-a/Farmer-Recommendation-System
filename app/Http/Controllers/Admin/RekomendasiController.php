@@ -9,6 +9,9 @@ class RekomendasiController extends Controller
 {
   public function index()
   {
-    return view('Pages.Rekomendasi.index');
+    $this->var = [
+      'title' => 'Dashboard | Rekomendasi'
+    ];
+    return view('Pages.Rekomendasi.index', $this->var);
   }
 }

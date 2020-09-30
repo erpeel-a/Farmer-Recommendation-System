@@ -9,6 +9,9 @@ class WilayahController extends Controller
 {
   public function index()
   {
-    return view('Pages.Wilayah.index');
+    $this->var = [
+      'title' => 'Dashboard | Wilayah'
+    ];
+    return view('Pages.Wilayah.index', $this->var);
   }
 }

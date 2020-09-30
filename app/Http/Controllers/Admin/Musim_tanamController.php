@@ -9,6 +9,9 @@ class Musim_tanamController extends Controller
 {
   public function index()
   {
-    return view('Pages.Musim_tanam.index');
+    $this->var = [
+      'title' => 'Dashboard | Musim Tanam'
+    ];
+    return view('Pages.Musim_tanam.index', $this->var);
   }
 }

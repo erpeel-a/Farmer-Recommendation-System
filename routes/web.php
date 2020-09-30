@@ -20,12 +20,13 @@ use App\Http\Controllers\Admin\WilayahController;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
+// Route::get('/', function () {
+//   return view('welcome');
+// });
 
 // contoh
-Route::get('/login', [AuthController::class, 'login']);
+Route::get('/', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'proccess_login'])->name('login.post');
 Route::get('/admin', [DashboardController::class, 'index']);
 Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
 Route::get('/musim', [Musim_tanamController::class, 'index']);

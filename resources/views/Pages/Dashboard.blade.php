@@ -17,7 +17,7 @@
                   <h4>Total User</h4>
                 </div>
                 <div class="card-body">
-                  10
+                  {{$User}}
                 </div>
               </div>
             </div>
@@ -32,7 +32,7 @@
                   <h4>Total Rekomendasi</h4>
                 </div>
                 <div class="card-body">
-                  42
+                  {{$Rekomendasi}}
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
                   <h4>Total Musim</h4>
                 </div>
                 <div class="card-body">
-                  1,201
+                 {{$Musim}}
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
                   <h4>Total Kebutuhan</h4>
                 </div>
                 <div class="card-body">
-                  47
+                  {{$Kebutuhan}}
                 </div>
               </div>
             </div>

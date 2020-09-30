@@ -9,6 +9,9 @@ class SatuanController extends Controller
 {
   public function index()
   {
-    return view('Pages.Satuan.index');
+    $this->var = [
+      'title' => 'Dashboard | Satuan'
+    ];
+    return view('Pages.Satuan.index', $this->var);
   }
 }
