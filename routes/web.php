@@ -27,9 +27,13 @@ use App\Http\Controllers\Admin\WilayahController;
 // contoh
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'proccess_login'])->name('login.post');
-Route::get('/admin', [DashboardController::class, 'index']);
-Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
-Route::get('/musim', [Musim_tanamController::class, 'index']);
-Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
-Route::get('/satuan', [SatuanController::class, 'index']);
-Route::get('/wilayah', [WilayahController::class, 'index']);
+
+Route::group(['middleware' => 'auth'], function(){
+  Route::get('/admin', [DashboardController::class, 'index']);
+  Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
+  Route::get('/musim', [Musim_tanamController::class, 'index']);
+  Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
+  Route::get('/satuan', [SatuanController::class, 'index']);
+  Route::get('/wilayah', [WilayahController::class, 'index']);
+  Route::post('/logout', [AuthController::class, 'logout'])->name('process.logout');
+});

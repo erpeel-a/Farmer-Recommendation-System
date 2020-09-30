@@ -29,6 +29,7 @@ class AuthController extends Controller
     {
         if(Auth::user()){
             Auth::logout();
+            return redirect()->route('login');
         }else{
             return redirect()->back();
         }

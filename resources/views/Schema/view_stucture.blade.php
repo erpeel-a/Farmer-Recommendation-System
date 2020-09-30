@@ -50,23 +50,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <!-- {{-- <div class="dropdown-title">Logged in 5 min ago</div> --}} -->
-                            <a href="#" target="_blank" class="dropdown-item has-icon">
-                                <i class="fas fa-external-link-alt"></i> View Site
-                            </a>
-                            <a href="#" class="dropdown-item has-icon">
-                                <i class="far fa-user"></i> Profile
-                            </a>
-                            <a href="#" class="dropdown-item has-icon">
-                                <i class="fas fa-cog"></i> Settings
-                            </a>
+
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item has-icon text-danger" href="#" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                <i class="fas fa-sign-out-alt"></i> Logout
-                            </a>
-
-                            <form id="logout-form" action="#" method="POST" style="display: none;">
-
+                            <form action="{{route('process.logout')}}" method="post">
+                                @csrf
+                                <button class="dropdown-item has-icon text-danger"> <i
+                                        class="fas fa-sign-out-alt mt-2"></i> Logout</button>
                             </form>
                         </div>
                     </li>
@@ -145,6 +134,7 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
         function DataTable(_table) {
             $(document).ready(() => {
                 $(_table).DataTable();
@@ -155,6 +145,7 @@
         DataTable('#TABLE_REKOMENDASI');
         DataTable('#TABLE_KEBUTUHAN');
         DataTable('#TABLE_WILAYAH');
+
     </script>
 </body>
 
