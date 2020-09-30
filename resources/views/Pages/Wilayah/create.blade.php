@@ -13,8 +13,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="title">Nama Wilayah</label>
-                            <input type="text" id="title" class="form-control @error('nama_wilayah') is invalid @enderror" name="nama_wilayah" autofocus="" value="{{old('nama_wilayah')}}">
+                                <label for="nama_wilayah">Nama Wilayah</label>
+                            <input type="text" id="nama_wilayah" class="form-control @error('nama_wilayah') is invalid @enderror" name="nama_wilayah" autofocus="" value="{{old('nama_wilayah')}}">
                             @error('nama_wilayah')
                               <div class="invalid-feedback">
                                 {{$message}}

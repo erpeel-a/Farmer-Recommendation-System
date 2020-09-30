@@ -14,8 +14,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="title">Nama Satuan</label>
-                            <input type="text" id="title" class="form-control @error('nama_satuan') is invalid @enderror" name="nama_satuan" autofocus="" value="{{$satuan->nama_satuan}}">
+                                <label for="nama_satuan">Nama Satuan</label>
+                            <input type="text" id="nama_satuan" class="form-control @error('nama_satuan') is invalid @enderror" name="nama_satuan" autofocus="" value="{{$satuan->nama_satuan}}">
                             </div>
                             @error('nama_satuan')
                               <div class="invalid-feedback">
