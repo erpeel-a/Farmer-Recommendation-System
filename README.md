@@ -1,7 +1,8 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-
-# Farmer Recommendation System (Laravel)
+<h1 align="center>
+     Farmer Recommendation System (Laravel)      
+</h1>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -10,11 +11,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-# Introduce
+## Introduce
 Farmer recommendation system is a simple application for managing needs & recommendation needs for farmers 
 
-# Prerequiste
-  - Composer - Download and Install Composer
+## Prerequiste
+  - [Composer](https://getcomposer.org/) - Download and Install Composer
 
 
 ### Installation
@@ -30,6 +31,15 @@ $ change setting for database & generate key with php artisan key:generate
 $ Call Action to Migrate Database & seeder with php artisan migrate --seed
 $ php artisan serve
 ```
+
+## Credits
+this software was developed with
+- [Laravel](https://laravel.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+## Support
+
+<a href="https://www.buymeacoffee.com/" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-violet.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
 The Project is MIT licensed.
 ----
