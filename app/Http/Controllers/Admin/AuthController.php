@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
@@ -18,19 +19,19 @@ class AuthController extends Controller
             'password' => 'required|min:5|max:255',
         ]);
 
-        if(Auth::attempt(['email' => $req->email,'password' => $req->password])){
-             return redirect('/admin');
-        }else{
+        if (Auth::attempt(['email' => $req->email, 'password' => $req->password])) {
+            return redirect('/admin');
+        } else {
             return redirect()->back()->with('status', 'Email atau Password Yang Anda Masukan Salah');
         }
     }
 
     public function logout()
     {
-        if(Auth::user()){
+        if (Auth::user()) {
             Auth::logout();
             return redirect()->route('login');
-        }else{
+        } else {
             return redirect()->back();
         }
     }
