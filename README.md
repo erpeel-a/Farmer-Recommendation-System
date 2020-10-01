@@ -12,12 +12,19 @@
     <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Introduce
-Farmer recommendation system is a simple application for managing needs & recommendation needs for farmers 
+# Introduce
+
+Farmer recommendation system is a simple application for managing needs & recommendation needs for farmers
+
+# Overview
+
+![Login](public/img/preview-login.png)
+![Admin](public/img/preview-admin.png)
 
 ## Prerequiste
   - [Composer](https://getcomposer.org/) - Download and Install Composer
 
+-   Composer - Download and Install Composer
 
 ### Installation
 
@@ -42,7 +49,13 @@ this software was developed with
 
 <a href="https://www.buymeacoffee.com/" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-violet.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
-The Project is MIT licensed.
-----
+## The Project is MIT licensed.
 
-© Muhamad Zainal Arifin | © Hendra Agil S | © Niko Febriyanto | © Muhammad  Afin
+Contributors
+
+-   [Muhamad Zainal Arifin](https://github.com/Zainal21)
+-   [Hendra Agil Syaputra](https://github.com/hendraaagil)
+-   [Niko Febriyanto](https://github.com/NFebri)
+-   [Muhammad Afin](https://github.com/muhammadafin)
+
+2020 © XII RPL A SMKN 2 Karanganyar
