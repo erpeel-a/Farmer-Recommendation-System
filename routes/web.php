@@ -23,9 +23,8 @@ use App\Http\Controllers\Admin\WilayahController;
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'proccess_login'])->name('login.post');
 
-Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => 'auth'], function () {
   Route::get('/admin', [DashboardController::class, 'index']);
-  Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
   Route::get('/musim', [Musim_tanamController::class, 'index']);
   Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
   // manage satuan
@@ -42,6 +41,13 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/wilayah/edit/{id}', [WilayahController::class, 'edit'])->name('wilayah.edit');
   Route::put('/wilayah/update/{id}', [WilayahController::class, 'update'])->name('wilayah.update');
   Route::delete('/wilayah/delete/{id}', [WilayahController::class, 'destroy'])->name('wilayah.destroy');
+  //kebutuhan
+  Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
+  Route::get('/kebutuhan/create', [KebutuhanController::class, 'create'])->name('kebutuhan.create');
+  Route::post('/wilayah', [KebutuhanController::class, 'store'])->name('kebutuhan.store');
+  Route::get('/wilayah/edit/{id}', [KebutuhanController::class, 'edit'])->name('kebutuhan.edit');
+  Route::put('/kebutuhan/update/{id}', [KebutuhanController::class, 'update'])->name('kebutuhan.update');
+  Route::delete('/kebutuhan/delete/{id}', [KebutuhanController::class, 'destroy'])->name('kebutuhan.destroy');
   // logout
   Route::post('/logout', [AuthController::class, 'logout'])->name('process.logout');
 });
