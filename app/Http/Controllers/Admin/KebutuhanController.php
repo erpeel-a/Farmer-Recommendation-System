@@ -17,7 +17,7 @@ class KebutuhanController extends Controller
   {
     $this->var = [
       'title' => 'Dashboard | Kebutuhan',
-      'kebutuhan' => Kebutuhan::all()
+      'kebutuhan' => Kebutuhan::get()
     ];
     return view('Pages.Kebutuhan.index', $this->var);
   }
@@ -34,6 +34,13 @@ class KebutuhanController extends Controller
 
   public function store(Request $req)
   {
+    $req->validate([
+      'wilayah_id' => 'required',
+      'satuan_id' => 'required',
+      'nama_kebutuhan' => 'required|min:3|max:255',
+      'harga_kebutuhan' => 'required|numeric',
+      'keterangan' => 'required'
+    ]);
     Kebutuhan::create($req->all());
     return redirect('/kebutuhan')->with('status', 'Data kebutuhan Berhasil Ditambahkan');
   }
@@ -42,7 +49,7 @@ class KebutuhanController extends Controller
   {
     $_dec = Crypt::Decrypt($id);
     $this->var = [
-      'title' => 'Dashboard | Edit Kebutuhab',
+      'title' => 'Dashboard | Edit Kebutuhan',
       'kebutuhan' => Kebutuhan::findOrfail($_dec),
       'satuan' => Satuan::get(),
       'wilayah' => Wilayah::get()
@@ -52,6 +59,13 @@ class KebutuhanController extends Controller
 
   public function update(Request $req, $id)
   {
+    $req->validate([
+      'wilayah_id' => 'required',
+      'satuan_id' => 'required',
+      'nama_kebutuhan' => 'required|min:3|max:255',
+      'harga_kebutuhan' => 'required|numeric',
+      'keterangan' => 'required'
+    ]);
     Kebutuhan::where(['id' => $id])->update([
       'wilayah_id' => $req->wilayah_id,
       'satuan_id' => $req->satuan_id,
