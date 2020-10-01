@@ -1,6 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-
 # Farmer Recommendation System (Laravel)
 
 <p align="center">
@@ -11,11 +10,17 @@
 </p>
 
 # Introduce
-Farmer recommendation system is a simple application for managing needs & recommendation needs for farmers 
+
+Farmer recommendation system is a simple application for managing needs & recommendation needs for farmers
+
+# Overview
+
+![Login](public/img/preview-login.png)
+![Login](public/img/preview-admin.png)
 
 # Prerequiste
-  - Composer - Download and Install Composer
 
+-   Composer - Download and Install Composer
 
 ### Installation
 
@@ -31,7 +36,13 @@ $ Call Action to Migrate Database & seeder with php artisan migrate --seed
 $ php artisan serve
 ```
 
-The Project is MIT licensed.
-----
+## The Project is MIT licensed.
 
-© Muhamad Zainal Arifin | © Hendra Agil S | © Niko Febriyanto 
+Contributors
+
+-   [Muhamad Zainal Arifin](https://github.com/Zainal21)
+-   [Hendra Agil Syaputra](https://github.com/hendraaagil)
+-   [Niko Febriyanto](https://github.com/NFebri)
+-   [Muhammad Afin](https://github.com/muhammadafin)
+
+2020 © XII RPL A SMKN 2 Karanganyar
