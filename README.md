@@ -45,4 +45,4 @@ this software was developed with
 The Project is MIT licensed.
 ----
 
-© Muhamad Zainal Arifin | © Hendra Agil S | © Niko Febriyanto 
+© Muhamad Zainal Arifin | © Hendra Agil S | © Niko Febriyanto | @ Muhammad  Afin
