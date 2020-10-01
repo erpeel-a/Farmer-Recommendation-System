@@ -22,9 +22,8 @@ Farmer recommendation system is a simple application for managing needs & recomm
 ![Admin](public/img/preview-admin.png)
 
 ## Prerequiste
-  - [Composer](https://getcomposer.org/) - Download and Install Composer
 
--   Composer - Download and Install Composer
+- [Composer](https://getcomposer.org/) - Download and Install Composer
 
 ### Installation
 
@@ -41,7 +40,7 @@ $ php artisan serve
 ```
 
 ## Credits
-this software was developed with
+This software was developed with
 - [Laravel](https://laravel.com/)
 - [Bootstrap](https://getbootstrap.com/)
 
