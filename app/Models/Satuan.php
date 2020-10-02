@@ -12,4 +12,9 @@ class Satuan extends Model
     protected $fillable = [
         'nama_satuan'
     ];
+
+    public function kebutuhan()
+    {
+        return $this->hasMany(Satuan::class, 'satuan_id', 'id');
+    }
 }

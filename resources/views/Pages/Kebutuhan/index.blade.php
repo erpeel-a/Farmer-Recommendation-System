@@ -36,7 +36,7 @@
                             <td><?= $i++ ?></td>
                             <td>{{ $k->nama_kebutuhan }}</td>
                             <td>ini judul</td>
-                            <td>{{ $k->satuan_id }}</td>
+                            <td>{{ $k->satuan->nama_satuan }}</td>
                             <td>{{ $k->harga_kebutuhan }}</td>
                             <td>{{ $k->keterangan }}</td>
                             <td>

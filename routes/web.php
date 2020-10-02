@@ -44,8 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
   //kebutuhan
   Route::get('/kebutuhan', [KebutuhanController::class, 'index']);
   Route::get('/kebutuhan/create', [KebutuhanController::class, 'create'])->name('kebutuhan.create');
-  Route::post('/wilayah', [KebutuhanController::class, 'store'])->name('kebutuhan.store');
-  Route::get('/wilayah/edit/{id}', [KebutuhanController::class, 'edit'])->name('kebutuhan.edit');
+  Route::post('/kebutuhan', [KebutuhanController::class, 'store'])->name('kebutuhan.store');
+  Route::get('/kebutuhan/edit/{id}', [KebutuhanController::class, 'edit'])->name('kebutuhan.edit');
   Route::put('/kebutuhan/update/{id}', [KebutuhanController::class, 'update'])->name('kebutuhan.update');
   Route::delete('/kebutuhan/delete/{id}', [KebutuhanController::class, 'destroy'])->name('kebutuhan.destroy');
   // logout

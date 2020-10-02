@@ -17,7 +17,7 @@ class KebutuhanController extends Controller
   {
     $this->var = [
       'title' => 'Dashboard | Kebutuhan',
-      'kebutuhan' => Kebutuhan::get()
+      'kebutuhan' => Kebutuhan::with('satuan')->get()
     ];
     return view('Pages.Kebutuhan.index', $this->var);
   }
