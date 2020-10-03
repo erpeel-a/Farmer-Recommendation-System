@@ -14,4 +14,12 @@ class RekomendasiController extends Controller
     ];
     return view('Pages.Rekomendasi.index', $this->var);
   }
+
+  public function create()
+  {
+    $this->var = [
+      'title' => 'Dashboard | Tambah Rekomendasi'
+    ];
+    return view('Pages.Rekomendasi.create', $this->var);
+  }
 }

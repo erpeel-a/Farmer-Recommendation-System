@@ -25,8 +25,6 @@ Route::post('/login', [AuthController::class, 'proccess_login'])->name('login.po
 
 Route::group(['middleware' => 'auth'], function () {
   Route::get('/admin', [DashboardController::class, 'index']);
-  Route::get('/musim', [Musim_tanamController::class, 'index']);
-  Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
   // manage satuan
   Route::get('/satuan', [SatuanController::class, 'index']);
   Route::get('/satuan/create', [SatuanController::class, 'create'])->name('satuan.create');
@@ -48,6 +46,12 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('/kebutuhan/edit/{id}', [KebutuhanController::class, 'edit'])->name('kebutuhan.edit');
   Route::put('/kebutuhan/update/{id}', [KebutuhanController::class, 'update'])->name('kebutuhan.update');
   Route::delete('/kebutuhan/delete/{id}', [KebutuhanController::class, 'destroy'])->name('kebutuhan.destroy');
+  //manage rekomendasi
+  Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
+  Route::get('/rekomendasi/create', [RekomendasiController::class, 'create'])->name('rekomendasi.create');
+  //manage musim
+  Route::get('/musim', [Musim_tanamController::class, 'index']);
+  Route::get('/musim/create', [Musim_tanamController::class, 'create'])->name('musim.create');
   // logout
   Route::post('/logout', [AuthController::class, 'logout'])->name('process.logout');
 });

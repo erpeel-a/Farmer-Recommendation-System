@@ -14,4 +14,12 @@ class Musim_tanamController extends Controller
     ];
     return view('Pages.Musim_tanam.index', $this->var);
   }
+
+  public function create()
+  {
+    $this->var = [
+      'title' => 'Dashboard | Tambah Musim Tanam'
+    ];
+    return view('Pages.Musim_tanam.create', $this->var);
+  }
 }

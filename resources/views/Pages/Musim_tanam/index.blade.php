@@ -10,6 +10,7 @@
             <div class="col">
               <div class="card">
                 <div class="card-body">
+                  <a href="{{route('musim.create')}}" class="btn btn-primary float-right mb-2">Tambah item</a>
                  <div class="table-responsive">
                     <table class="table table-bordered" width="100%" id="TABLE_MUSIM">
                       <thead class="thead-light">
