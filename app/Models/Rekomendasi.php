@@ -12,4 +12,9 @@ class Rekomendasi extends Model
     protected $fillable = [
         'kebutuhan_id', 'jumlah', 'harga_total'
     ];
+
+    public function kebutuhan()
+    {
+        return $this->belongsTo(Kebutuhan::class, 'kebutuhan_id', 'id');
+    }
 }

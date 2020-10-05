@@ -31,7 +31,7 @@
                           @foreach ($rekomendasi as $item)
                           <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{ $item->kebutuhan_id }}</td>
+                            <td>{{ $item->kebutuhan->nama_kebutuhan }}</td>
                             <td>{{ $item->jumlah }}</td>
                             <td>{{ $item->harga_total }}</td>
                             <td>
