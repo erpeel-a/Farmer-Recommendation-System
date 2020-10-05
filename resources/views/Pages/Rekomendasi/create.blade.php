@@ -6,7 +6,7 @@
           <div class="section-header">
               <h1>Tambah Rekomendasi</h1>
           </div>
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('rekomendasi.store') }}" method="POST" enctype="multipart/form-data">
           @csrf
             <div class="row">
                 <div class="col-md">
@@ -16,9 +16,9 @@
                             <label for="kebutuhan_id">Kebutuhan</label>
                             <select name="kebutuhan_id" id="kebutuhan_id" class="form-control @error('kebutuhan_id') is-invalid @enderror">
                               <option disabled selected>kebutuhan</option>
-                              <option value="">kebutuhan1</option>
-                              <option value="">kebutuhan2</option>
-                              <option value="">kebutuhan3</option>
+                              @foreach ($kebutuhan as $butuh)
+                                <option value="{{ $butuh->id }}">{{ $butuh->nama_kebutuhan }}</option>
+                              @endforeach
                             </select>
                             @error('kebutuhan_id')
                               <div class="invalid-feedback">
