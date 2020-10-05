@@ -49,6 +49,10 @@ Route::group(['middleware' => 'auth'], function () {
   //manage rekomendasi
   Route::get('/rekomendasi', [RekomendasiController::class, 'index']);
   Route::get('/rekomendasi/create', [RekomendasiController::class, 'create'])->name('rekomendasi.create');
+  Route::post('/rekomendasi', [RekomendasiController::class, 'store'])->name('rekomendasi.store');
+  Route::get('/rekomendasi/edit/{id}', [RekomendasiController::class, 'edit'])->name('rekomendasi.edit');
+  Route::put('/rekomendasi/update/{id}', [RekomendasiController::class, 'update'])->name('rekomendasi.update');
+  Route::delete('/rekomendasi/delete/{id}', [RekomendasiController::class, 'destroy'])->name('rekomendasi.destroy');
   //manage musim
   Route::get('/musim', [Musim_tanamController::class, 'index']);
   Route::get('/musim/create', [Musim_tanamController::class, 'create'])->name('musim.create');
