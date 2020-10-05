@@ -16,4 +16,9 @@ class Kebutuhan extends Model
     {
         return $this->belongsTo(Satuan::class, 'satuan_id', 'id');
     }
+
+    public function rekomendasi()
+    {
+        return $this->hasMany(Rekomendasi::class, 'kebutuhan_id', 'id');
+    }
 }

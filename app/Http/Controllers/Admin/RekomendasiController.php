@@ -30,6 +30,11 @@ class RekomendasiController extends Controller
 
   public function store(Request $req)
   {
+    $req->validate([
+      'kebutuhan_id' => 'required',
+      'jumlah' => 'required',
+      'harga_total' => 'required',
+    ]);
     Rekomendasi::create($req->all());
     return redirect('/rekomendasi')->with('status', 'Data Rekomendasi Berhasil Ditambahkan');
   }
@@ -47,6 +52,11 @@ class RekomendasiController extends Controller
 
   public function update(Request $req, $id)
   {
+    $req->validate([
+      'kebutuhan_id' => 'required',
+      'jumlah' => 'required',
+      'harga_total' => 'required',
+    ]);
     Rekomendasi::where(['id' => $id])->update([
       'kebutuhan_id' => $req->kebutuhan_id,
       'jumlah' => $req->jumlah,
