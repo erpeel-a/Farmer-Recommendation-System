@@ -56,6 +56,10 @@ Route::group(['middleware' => 'auth'], function () {
   //manage musim
   Route::get('/musim', [Musim_tanamController::class, 'index']);
   Route::get('/musim/create', [Musim_tanamController::class, 'create'])->name('musim.create');
+  Route::post('/musim', [Musim_tanamController::class, 'store'])->name('musim.store');
+  Route::get('/musim/edit/{id}', [Musim_tanamController::class, 'edit'])->name('musim.edit');
+  Route::put('/musim/update/{id}', [Musim_tanamController::class, 'update'])->name('musim.update');
+  Route::delete('/musim/delete/{id}', [Musim_tanamController::class, 'destroy'])->name('musim.destroy');
   // logout
   Route::post('/logout', [AuthController::class, 'logout'])->name('process.logout');
 });

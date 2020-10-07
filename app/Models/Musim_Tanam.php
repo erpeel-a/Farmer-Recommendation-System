@@ -10,6 +10,6 @@ class Musim_Tanam extends Model
     use HasFactory;
     protected $table = 'musim_tanam';
     protected $fillable = [
-        'rekomendasi_id','wilayah_id', 'nomor_musim', 'nama_petani', 'luas_tanah', 'tanggal_tanam'
+        'rekomendasi_id', 'wilayah_id', 'nomor_musim', 'nama_petani', 'nama_musim', 'luas_tanah', 'tanggal_tanam'
     ];
 }
