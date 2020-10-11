@@ -20,7 +20,8 @@ use App\Http\Controllers\Admin\WilayahController;
 |
 */
 
-Route::get('/', [AuthController::class, 'login'])->name('login');
+Route::view('/', 'landing');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'proccess_login'])->name('login.post');
 
 Route::group(['middleware' => 'auth'], function () {
