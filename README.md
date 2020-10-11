@@ -18,6 +18,7 @@ Farmer recommendation system is a simple application for managing needs & recomm
 
 # Overview
 
+![Landing](public/img/preview-landing-page.png)
 ![Login](public/img/preview-login.png)
 ![Admin](public/img/preview-admin.png)
 
