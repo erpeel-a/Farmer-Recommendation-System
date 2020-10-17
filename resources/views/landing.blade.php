@@ -13,7 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
 
     <!-- My CSS -->
+    
     <link rel="stylesheet" href="{{ asset('Backend/css/landing.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/hamburgers.css') }}">
 
     <title>Farm.In</title>
   </head>
@@ -21,14 +23,19 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-brand" href="#">Farm.In</a>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
             <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="#about">About</a>
-              <a class="nav-item nav-link" href="#features">Features</a>
-              <a class="nav-item btn border border-light rounded-0" href="login">Sign In</a>
+              <a class="nav-item text-light nav-link active" href="#home">Home</a>
+              <a class="nav-item text-light nav-link" href="#about">About</a>
+              <a class="nav-item text-light nav-link" href="#features">Features</a>
+              <a class="nav-item text-light btn border border-light rounded-0" href="login">Sign In</a>
             </div>
+          <!-- </div> -->
+          <div class="menu-toggle">
+            <input type="checkbox">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
           </div>
         </div>
       </nav>
