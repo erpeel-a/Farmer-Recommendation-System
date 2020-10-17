@@ -1,0 +1,98 @@
+@media screen and (max-width:768px){
+  nav.sticky .menu-toggle span{
+    background-color: rgb(75, 90, 255);
+  }
+
+  .menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-toggle input{
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 28px;
+    z-index: 100;
+    opacity: 0;
+  }
+  
+  .menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .menu-toggle:hover span.one{
+    width: 28px;
+  }
+  
+  .menu-toggle:hover span.two{
+    width: 20px;
+  }
+  
+  .menu-toggle:hover span.three{
+    width: 25px;
+  }
+
+  /* Animation */
+  .menu-toggle .one{
+  transform-origin: 0 0;
+  }
+
+  .menu-toggle .three{
+    transform-origin: 0 100%;
+  }
+
+  .menu-toggle input:checked ~ .one{
+    transform: rotate(44deg) translate(-1.2px, -0.5px);
+    width: 28px;
+  }
+
+  .menu-toggle input:checked ~ .two{
+    transform: scale(0);
+  }
+
+  .menu-toggle input:checked ~ .three{
+    transform: rotate(-45deg) translate(-0.5px, 0);
+    width: 28px;
+  }
+  
+  .navbar-nav{
+    position: absolute;
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    top: 0;
+    left: -5%;
+    background-color: #fff;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 1s ease;
+    opacity: 0;
+  }
+
+  .navbar-nav.slide{
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: 10px 0px 30px rgba(35, 125, 247, 0.1);
+  }
+
+  .navbar-nav.slide a{
+    color: rgb(75, 90, 255) !important;
+  }
+
+  .navbar-nav.slide .btn{
+    border-color: rgb(75, 90, 255) !important;
+  }
+
+  
+}
